@@ -1,6 +1,10 @@
-<ul>
-    <li *ngFor="let persona of persone; index as i">
-    <div class="cerchio" [ngClass]="persona.isOnline ? 'cerchioOnline' : 'cerchioOffline'">{{i}}</div>
-    <p> {{persona.nome}} {{persona.cognome}}</p>
-    </li>
-</ul>
+<!--
+
+    Passare dati da un component Parent ad un Child
+    
+
+    
+-->
+<div *ngFor="let persona of data;">
+<p [ngStyle]="{color: persona.color}">{{persona.nome}} {{persona.cognome}}</p>
+</div>

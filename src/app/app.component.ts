@@ -14,5 +14,28 @@ import { Component } from '@angular/core'; //il fulcro di angular
 //Una classe che esportiamo
 export class AppComponent {
   title = 'corso-angular';
+  
+  persone = [
+    { nome : "luca", cognome : "rossi", isOnline: true, color: 'blue'},
+    { nome : "Anna", cognome : "verdi", isOnline: true, color: 'green'},
+    { nome : "Marco", cognome : "Franco", isOnline: false, color: 'grey'},
+    { nome : "Leonardo", cognome : "Pannocchia", isOnline: true, color: 'red'},
+    { nome : "qwertyu", cognome : "Franco", isOnline: false, color: 'yellow'},
+  ]
+
+  onClick() {
+    this.persone = [
+      { nome : "ergvrdf", cognome : "rossi", isOnline: true, color: 'blue'},
+      { nome : "ebv ", cognome : "verdi", isOnline: true, color: 'green'},
+      { nome : "nnnnn", cognome : "Franco", isOnline: false, color: 'grey'},
+      { nome : "Leonwgrewg", cognome : "Pannocchia", isOnline: true, color: 'red'},
+      { nome : "etgverdg", cognome : "Franco", isOnline: false, color: 'yellow'},
+    ]
+  }
+
+  riceviDatiEvento(value: string) {
+    console.log(value)
+  }
+
 }
 // e' il cervello

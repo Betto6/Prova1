@@ -1,32 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-parent-child',
   templateUrl: './parent-child.component.html',
   styleUrls: ['./parent-child.component.css']
 })
-export class ParentChildComponent 
+export class ParentChildComponent implements OnInit, OnChanges
 {
-  persone = [
-    { nome : "luca", cognome : "rossi", isOnline: true, color: 'blue'},
-    { nome : "Anna", cognome : "verdi", isOnline: true, color: 'green'},
-    { nome : "Marco", cognome : "Franco", isOnline: false, color: 'grey'},
-    { nome : "Leonardo", cognome : "Pannocchia", isOnline: true, color: 'red'},
-    { nome : "qwertyu", cognome : "Franco", isOnline: false, color: 'yellow'},
-  ]
-  title = 'corso-angular'
-  onInput(event : Event){
-    this.title = (<HTMLInputElement>event.target).value ;
-  }
-  onClick(event : Event) 
-  {
-    this.title = "ho cliccato sul bottone"
-  }
+
+  @Input() data: any;
 
 
-  color = 'green'
+  ngOnInit(): void {}
 
-  getColor() {
-    return 'green'
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
   }
 }
