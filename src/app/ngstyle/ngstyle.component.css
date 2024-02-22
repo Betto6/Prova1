@@ -1,0 +1,31 @@
+.cerchioVerde, .cerchioRosso
+{
+    width: 30px;
+    height: 30px;
+
+}
+
+.cerchioVerde{
+background-color: green;
+}
+
+.cerchioRosso{
+    background-color:red;
+}
+
+.cerchio {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: blue;
+    margin-right: 10px;
+}
+
+li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+li > p {
+    margin-bottom: 0;
+}

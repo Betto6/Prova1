@@ -1,0 +1,12 @@
+<!--
+    ngSwitch -> non è una direttiva strutturale
+    *ngSwitchCase -> è la vera direttiva che va a modificare gli elementi
+-->
+<div [ngSwitch]="stringa">
+<p *ngSwitchCase="3">uno</p>
+<p *ngSwitchCase="'paperino'">due</p>
+<p *ngSwitchCase="4">tre</p>
+<p *ngSwitchCase="'topolino'">quattro</p>
+<p *ngSwitchDefault>default</p>
+
+</div>

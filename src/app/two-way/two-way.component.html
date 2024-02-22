@@ -1,0 +1,19 @@
+<p>{{title}}</p>
+
+<!--Collega TS all'HTML e viceversa
+
+esempio con immput-->
+
+<!-- DIRETTIVE 
+     sono classi che aggiungono comportamenti agli elementi e si dividono in 3 categorie :
+      - Bulti-in, costruite dentro Angular (NgClass, NgStyle, NgModel) modificano il comportamento di un elemento 
+      - Attribute (personalizzate), modificano comportamento o apparenza di un elemento
+      - Structural, (*NgIf, *NgFor) cambiamo il DOM (Il nostro foglio HTML, con tutti gli elementi) aggiungendo o rimuovendo elementi 
+-->
+
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Favorite food</mat-label>
+      <input matInput placeholder="Ex. Pizza" [(ngModel)]="title">
+    </mat-form-field>
+    <button mat-raised-button color="primary"(click)="onClick($event)">Primary</button>

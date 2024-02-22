@@ -1,0 +1,52 @@
+<!-- <p>prova works!</p> -->
+
+<!-- Databinding 
+    collegare parte logica a ciò che l'utente vede a schermo e viceversa.
+
+    one-way - Portiamo i dati da Logicaa componente, oppure il contrario
+    two-way - Portiamo i dati da una parte all'altra in contempoanea
+
+    ONE WAY
+    String interpolation : Manda dati a schermo passandoli come dati 
+
+    property binding : proprietà elementi html collegati alla logica
+
+    event binding : leghiamo eventi che compiaiono in html e li mandiamo a typescript 
+
+    TWO WAY 
+    per esempio form dove prendiamo dei dati da TS, ma se succede qualcosa li andiamo comunque a modificare
+
+
+-->
+
+<!--
+  ternario 
+  condizione ? questo : else ;
+
+-->
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="immagine" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
+
+
+<br><br><br>
+
+<!-- disable : disattiva il botton finchè non diventa true, dipende da qualcosa che abbiamo sulla logica del componente-->
+<button mat-button color="primary" [disabled]="isDisabled">Primary</button>

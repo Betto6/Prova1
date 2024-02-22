@@ -1,0 +1,27 @@
+
+<!--
+    DIRETTIVA NgIf
+    è un banale if, permette di mostrare o meno un elemento in base ad una condizione 
+-->
+
+<p *ngIf="isVisible">è visibile</p>
+<p *ngIf="!isVisible">non è visibile</p>
+
+<!--
+    Costrutto molto pi+ comodo da utilizzare
+-->
+
+<!-- ng-template contenitore che angular vede ed il DOM non sa cosa farsene, lo interpreta solo angular.
+è fondamentale perchè permette di creare una sorta di elemento con logica aggiuntiva che angular gestisce-->
+<ng-template></ng-template>
+
+<p *ngIf="isVisible; then bloccoIf else bloccoElse">sono visibile</p>
+<!-- l'else della condizione funziona richiamando per #nome detta variabile template, non può essere su un elemento
+    effettivo (ees. p, div ecc...) ma va nel wrapper di angular ng-template-->
+<ng-template #bloccoIf>
+    <p>Io sono visibile</p>
+</ng-template>
+
+<ng-template #bloccoElse>
+    <p>non sono visibile</p>
+</ng-template>
