@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-ngstyle',
-  templateUrl: './ngstyle.component.html',
-  styleUrls: ['./ngstyle.component.css']
+  selector: 'app-parent-child',
+  templateUrl: './parent-child.component.html',
+  styleUrls: ['./parent-child.component.css']
 })
-export class NgstyleComponent 
+export class ParentChildComponent 
 {
   persone = [
     { nome : "luca", cognome : "rossi", isOnline: true, color: 'blue'},
     { nome : "Anna", cognome : "verdi", isOnline: true, color: 'green'},
-    { nome : "Marco", cognome : "Franco", isOnline: false, color: 'blue'},
+    { nome : "Marco", cognome : "Franco", isOnline: false, color: 'grey'},
     { nome : "Leonardo", cognome : "Pannocchia", isOnline: true, color: 'red'},
     { nome : "qwertyu", cognome : "Franco", isOnline: false, color: 'yellow'},
   ]

@@ -23,10 +23,12 @@ import { NGIFComponent } from './ngif/ngif.component';
 import { NgforComponent } from './ngfor/ngfor.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { NgstyleComponent } from './ngstyle/ngstyle.component';
+import { NgclassComponent } from './ngclass/ngclass.component';
+import { ParentChildComponent } from './parent-child/parent-child.component';
 
 
 @NgModule({
-  declarations: [AppComponent, Prova1Component, Prova2Component, TwoWayComponent, NGIFComponent, NgforComponent, NgswitchComponent, NgstyleComponent],
+  declarations: [AppComponent, Prova1Component, Prova2Component, TwoWayComponent, NGIFComponent, NgforComponent, NgswitchComponent, NgstyleComponent, NgclassComponent, ParentChildComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

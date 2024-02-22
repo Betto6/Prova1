@@ -1,0 +1,43 @@
+<!--
+    NGCLASS
+    Modifica gli attributi di una classe nel css, funziona in aggiunta alle caratteristiche della classe iniziale
+    se ci sono parametri omonimi li sostituisce
+    se ci sono nuovi parametri li aggiunge a quelli già presenti
+-->
+
+
+
+<ul>
+    <li *ngFor="let persona of persone; index as i">
+    <div class="cerchio" [ngClass]="{'cerchioOnline' : persona.isOnline, 'cerchioOffline' : !persona.isOnline, 'prova' : persona.color == 'blue'}">{{i}}</div>
+    <p> {{persona.nome}} {{persona.cognome}}</p>
+    </li>
+</ul>
+<br><br><br><br>
+<ul>
+    <li *ngFor="let persona of persone; index as i">
+    <div class="cerchio" [ngClass]="persona.isOnline ? 'cerchioOnline' : 'cerchioOffline'">{{i}}</div>
+    <p> {{persona.nome}} {{persona.cognome}}</p>
+    </li>
+</ul>
+
+
+
+
+
+
+
+<!-- <ul>
+    <li *ngFor="let persona of persone; index as i">
+    <div class="cerchio" [ngClass]="'cerchioOnline'">{{i}}</div>
+    <p> {{persona.nome}} {{persona.cognome}}</p>
+    </li>
+</ul> -->
+
+<!-- <ul>
+    <li *ngFor="let persona of persone; index as i">
+    <div class="cerchio" [ngClass]="['nomeclasse','nomeclasse1']">{{i}}</div>
+    <p> {{persona.nome}} {{persona.cognome}}</p>
+    </li>
+</ul> -->
+

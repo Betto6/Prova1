@@ -1,11 +1,20 @@
 <!--
     NGSTYLE
-
+    le proprietà css si possono scrivere o in camel case o in formattazione css
+    - camel case -> marginBottom
+    - css -> margin-bottom
 -->
+
+<!-- <ul>
+    <li *ngFor="let persona of persone">
+        <div class="cerchio" [ngStyle]="{'background': persona.isOnline ? 'green' : 'red'}"></div>
+    <p> {{persona.nome}} {{persona.cognome}}</p>
+    </li>
+</ul> -->
 
 <ul>
     <li *ngFor="let persona of persone">
-        <div class="cerchio" [ngStyle]="{'background': persona.isOnline ? 'green' : 'red'}"></div>
+        <div class="cerchio" [ngStyle]="{'background': persona.color}"></div>
     <p> {{persona.nome}} {{persona.cognome}}</p>
     </li>
 </ul>
