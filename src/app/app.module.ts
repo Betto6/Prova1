@@ -26,10 +26,12 @@ import { NgstyleComponent } from './ngstyle/ngstyle.component';
 import { NgclassComponent } from './ngclass/ngclass.component';
 import { ParentChildComponent } from './parent-child/parent-child.component';
 import { ChildParentComponent } from './child-parent/child-parent.component';
+import { ReferenceHTMLComponent } from './reference-html/reference-html.component';
+import { DirettiveComponent } from './direttive/direttive.component';
 
 
 @NgModule({
-  declarations: [AppComponent, Prova1Component, Prova2Component, TwoWayComponent, NGIFComponent, NgforComponent, NgswitchComponent, NgstyleComponent, NgclassComponent, ParentChildComponent, ChildParentComponent],
+  declarations: [AppComponent, Prova1Component, Prova2Component, TwoWayComponent, NGIFComponent, NgforComponent, NgswitchComponent, NgstyleComponent, NgclassComponent, ParentChildComponent, ChildParentComponent, ReferenceHTMLComponent, DirettiveComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
