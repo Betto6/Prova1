@@ -7,10 +7,35 @@
 
 <!--
     Prendere reference elemento HTML in typescript 
--->
 
+    Vedi parte di app.component.ts, utilizzati secondo metodo OnClick, concetto di viewChild ed ngOnIt, ngAfterview
 
 <input #inputSaluti value="ciao">
 
 <button (click)="onClick()"></button>
 
+
+
+  ngOnInit(): void {
+    console.log('ngOnInit')
+    console.log(this.inputSaluti)
+  }
+
+  ngAfterViewInit(): void {
+    console.log('ngAfterViewInit')
+    console.log(this.inputSaluti)
+  }
+
+  onClick() {
+    .nativeElement prende in tempo reale il valore dell'elemento nativo, così possiamo andare a prendere tutto ciò che vogliamo.
+    Per esempio prendere tutti gli imput di un form
+    Il type any non ha un native element, quindi non funziona. Non ci da il value perchè nativeElement può essere input, div ecc.. 
+    quindi non sa che tipo nello specifico. 
+    
+    console.log(this.inputSaluti.nativeElement.value)
+  }
+
+
+
+
+-->

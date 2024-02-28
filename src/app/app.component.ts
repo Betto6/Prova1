@@ -37,6 +37,8 @@ export class AppComponent implements OnInit, AfterViewInit{
     { nome : "qwertyu", cognome : "Franco", isOnline: false, color: 'yellow'},
   ]
 
+
+  // Per spiegazione ---
   // onClick() {
   //   this.persone = [
   //     { nome : "ergvrdf", cognome : "rossi", isOnline: true, color: 'blue'},
