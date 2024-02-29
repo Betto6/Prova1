@@ -28,10 +28,15 @@ import { ParentChildComponent } from './parent-child/parent-child.component';
 import { ChildParentComponent } from './child-parent/child-parent.component';
 import { ReferenceHTMLComponent } from './reference-html/reference-html.component';
 import { DirettiveComponent } from './direttive/direttive.component';
+import { HighlightDirective } from './direttive_generate/highlight.directive';
+import { PipesComponent } from './pipes/pipes.component';
+import { ServiceComponent } from './service/service.component';
 
 
 @NgModule({
-  declarations: [AppComponent, Prova1Component, Prova2Component, TwoWayComponent, NGIFComponent, NgforComponent, NgswitchComponent, NgstyleComponent, NgclassComponent, ParentChildComponent, ChildParentComponent, ReferenceHTMLComponent, DirettiveComponent],
+  // nelle declarations vengono dichiarati i componenti, le direttive, le pipe ecc.. i building block (mattoncini) dell'applicazione
+  declarations: [AppComponent, Prova1Component, Prova2Component, TwoWayComponent, NGIFComponent, NgforComponent, NgswitchComponent, NgstyleComponent, NgclassComponent, ParentChildComponent, ChildParentComponent, ReferenceHTMLComponent, DirettiveComponent, HighlightDirective, PipesComponent, ServiceComponent],
+  // vengono inseriti i moduli, che ci servono per lavorare 
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -45,6 +50,7 @@ import { DirettiveComponent } from './direttive/direttive.component';
     MatInputModule,
     FormsModule,
   ],
+  // nei providers va inserito il nome dei service
   providers: [],
   bootstrap: [AppComponent],
 })

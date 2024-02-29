@@ -5,6 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './direttive.component.html',
   styleUrls: ['./direttive.component.css']
 })
-export class DirettiveComponent {
+export class DirettiveComponent 
+{
 
+  mandaDati() {
+
+  }
 }

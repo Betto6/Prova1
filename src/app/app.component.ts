@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core'; //il fulcro di angular
+import { ServizioProvaService } from './servizi/servizio-prova.service';
 
 //Decorator ovvero specificando che cos'e' una classe
 //selector --- collegamento tra componenti
@@ -13,6 +14,11 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 
 //Una classe che esportiamo
 export class AppComponent implements OnInit, AfterViewInit{
+
+  colore = ''
+  numero = 5.56
+
+  oggi = Date.now()
 
   title = 'corso-angular';
 
@@ -29,13 +35,13 @@ export class AppComponent implements OnInit, AfterViewInit{
   valore = 'ciao'
   numeroOrdine = 'ciccio'
   
-  persone = [
-    { nome : "luca", cognome : "rossi", isOnline: true, color: 'blue'},
-    { nome : "Anna", cognome : "verdi", isOnline: true, color: 'green'},
-    { nome : "Marco", cognome : "Franco", isOnline: false, color: 'grey'},
-    { nome : "Leonardo", cognome : "Pannocchia", isOnline: true, color: 'red'},
-    { nome : "qwertyu", cognome : "Franco", isOnline: false, color: 'yellow'},
-  ]
+  // persone = [
+  //   { nome : "luca", cognome : "rossi", isOnline: true, color: 'blue'},
+  //   { nome : "Anna", cognome : "verdi", isOnline: true, color: 'green'},
+  //   { nome : "Marco", cognome : "Franco", isOnline: false, color: 'grey'},
+  //   { nome : "Leonardo", cognome : "Pannocchia", isOnline: true, color: 'red'},
+  //   { nome : "qwertyu", cognome : "Franco", isOnline: false, color: 'yellow'},
+  // ]
 
 
   // Per spiegazione ---
@@ -53,10 +59,10 @@ export class AppComponent implements OnInit, AfterViewInit{
     console.log(value)
   }
 
-  ngOnInit(): void {
-    console.log('ngOnInit')
-    console.log(this.inputSaluti)
-  }
+  // ngOnInit(): void {
+  //   console.log('ngOnInit')
+  //   console.log(this.inputSaluti)
+  // }
 
   ngAfterViewInit(): void {
     console.log('ngAfterViewInit')
@@ -72,6 +78,17 @@ export class AppComponent implements OnInit, AfterViewInit{
     console.log(this.inputSaluti.nativeElement.value)
   }
 
+
+  cambiaColoreEvidenziatore(colore: string){
+    this.colore = colore
+  }
+
+  constructor(private servizioProva: ServizioProvaService) {
+
+  }
+  ngOnInit(): void {
+    console.log('appcomponent', this.servizioProva.persone)
+  }
 
 }
 // e' il cervello

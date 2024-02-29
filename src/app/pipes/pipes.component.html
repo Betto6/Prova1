@@ -1,0 +1,46 @@
+<!--
+
+  PIPES
+
+  FUNZIONI che possiamo utilizzare quando facciamo string interpolation e si possono anche cosruire in modo personalizzato
+
+  Per la pipe si usa il simbolo "|"
+
+  date permette di fomrattare la data in mm/gg/aaaa
+
+  'medium'    -> aggiunge l'ora in tempo reale
+  'shortTime' -> fa vedere solo l'ora del giorno in tempo reale con le indicazioni am e pm 
+  'h:mm:ss'     -> fa comparire ore, minuti e secondi 
+
+<p>ciao Benvenuti al {{title | uppercase }}</p>
+<p>Ciao mi devi {{numero}}</p>
+<p>{{oggi |date:'medium' }}</p>
+<p>{{oggi |date:'shortTime' }}</p>
+<p>{{oggi |date:'h:mm:ss' }}</p>
+<p>{{oggi |date:'d MMM yyyy - h:mm:ss' }}</p>
+-->
+
+<!--
+  decimalepipe: permette di mettere i decimali 
+  es. : 2.1-4   -> significa stampare due numeri interi, con minimo un decimale e massimo 4 decimali
+  number : numero 
+  percent : percentuale
+
+<p>{{numero | number: '2.2-3'}}</p>
+<p>{{numero | percent: '2.2-3'}}</p>
+-->
+
+
+<!--
+  currencypipe
+  currency : mette i dollari di default 
+              EUR -> Imposta in euro 
+              symbol -> inserisce il simbolo della valuta 
+              si può specificare quanti interi e decimali come i numeri 
+
+Si può ache dire all'applicazione come prendere le informazioni locali automaticaemnte di dove si trova l'utente (vedere documentazione) 
+
+
+
+<p>{{numero | currency:'EUR'}}</p>
+-->

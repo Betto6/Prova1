@@ -39,3 +39,100 @@
 
 
 -->
+
+
+<!--
+
+  DIRETTIVE 
+
+  ng g d 'nome_direttiva' è il comando da terminale per creare la direttiva 
+  le direttive vengono poi inserite in una cartella chiamata "direttive" ( in questo caso direttive_generate in quanto la cartella direttive è già il nome del componente)
+
+
+
+<h2>scegli il colore dell'evidenziatore</h2>
+
+<div>
+  <input type="radio" name="coloreEvidenziatore" (click)="cambiaColoreEvidenziatore('red')">rosso
+  <input type="radio" name="coloreEvidenziatore" (click)="cambiaColoreEvidenziatore('pink')">rosa
+  <input type="radio" name="coloreEvidenziatore" (click)="cambiaColoreEvidenziatore('purple')">viola
+</div>
+
+<p [appHighlight]="colore">Ciao sono un paragrafo</p>
+
+
+  assegnare valori di default, si ha un altro @imput
+
+
+<p [appHighlight]="colore" defaultColor="blue">Ciao sono un paragrafo</p>
+<p [appHighlight]="colore" defaultColor="grey">Ciao sono un paragrafo</p>
+<p [appHighlight]="colore" defaultColor="green">Ciao sono un paragrafo</p>
+
+-->
+
+
+
+
+
+<!--
+
+  PIPES
+
+  FUNZIONI che possiamo utilizzare quando facciamo string interpolation e si possono anche cosruire in modo personalizzato
+
+  Per la pipe si usa il simbolo "|"
+
+  date permette di fomrattare la data in mm/gg/aaaa
+
+  'medium'    -> aggiunge l'ora in tempo reale
+  'shortTime' -> fa vedere solo l'ora del giorno in tempo reale con le indicazioni am e pm 
+  'h:mm:ss'     -> fa comparire ore, minuti e secondi 
+
+<p>ciao Benvenuti al {{title | uppercase }}</p>
+<p>Ciao mi devi {{numero}}</p>
+<p>{{oggi |date:'medium' }}</p>
+<p>{{oggi |date:'shortTime' }}</p>
+<p>{{oggi |date:'h:mm:ss' }}</p>
+<p>{{oggi |date:'d MMM yyyy - h:mm:ss' }}</p>
+-->
+
+<!--
+  decimalepipe: permette di mettere i decimali 
+  es. : 2.1-4   -> significa stampare due numeri interi, con minimo un decimale e massimo 4 decimali
+  number : numero 
+  percent : percentuale
+
+<p>{{numero | number: '2.2-3'}}</p>
+<p>{{numero | percent: '2.2-3'}}</p>
+-->
+
+
+<!--
+  currencypipe
+  currency : mette i dollari di default 
+              EUR -> Imposta in euro 
+              symbol -> inserisce il simbolo della valuta 
+              si può specificare quanti interi e decimali come i numeri 
+
+Si può ache dire all'applicazione come prendere le informazioni locali automaticaemnte di dove si trova l'utente (vedere documentazione) 
+
+
+
+<p>{{numero | currency:'EUR'}}</p>
+-->
+
+
+<!--
+  SERVICES
+
+  Possono comunicare con tutti i componenti in modo trasversale
+  I componenti in realtà devono limitarsi a mostrare a schermo roba, non devono avere logica al loro interno 
+  i dati importanti non vanno salvati nei componenti e soprattutto non si deve usare troppa logica nei componenti 
+  Per esempio una funzione per ordinare dei dati richiederà direttamente al service i dati ordinati e si limiterà 
+    a mostrarli a schermo 
+
+    ng g s nome_del_Service -> è il comando da usare da termianle per creare un nuovo service 
+                                i service creati per organizzazione vanno messi dentro la stessa cartella da noi creata
+-->
+
+<app-service></app-service>
