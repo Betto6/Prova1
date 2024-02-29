@@ -64,10 +64,16 @@ export class AppComponent implements OnInit, AfterViewInit{
   //   console.log(this.inputSaluti)
   // }
 
-  ngAfterViewInit(): void {
-    console.log('ngAfterViewInit')
-    console.log(this.inputSaluti)
-  }
+  // ngAfterViewInit(): void {
+  //   console.log('ngAfterViewInit')
+  //   console.log(this.inputSaluti)
+  // }  
+   ngAfterViewInit(): void {
+
+   }
+
+
+
 
   onClick() {
     //.nativeElement prende in tempo reale il valore dell'elemento nativo, così possiamo andare a prendere tutto ciò che vogliamo.
@@ -82,12 +88,19 @@ export class AppComponent implements OnInit, AfterViewInit{
   cambiaColoreEvidenziatore(colore: string){
     this.colore = colore
   }
+  // Per utilizzare/capire i service
+  // constructor(private servizioProva: ServizioProvaService) {
 
-  constructor(private servizioProva: ServizioProvaService) {
+  // }
+  // ngOnInit(): void {
+  //   console.log('appcomponent', this.servizioProva.persone)
+  // }
+
+  constructor() {
 
   }
   ngOnInit(): void {
-    console.log('appcomponent', this.servizioProva.persone)
+
   }
 
 }
