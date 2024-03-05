@@ -135,4 +135,36 @@ Si può ache dire all'applicazione come prendere le informazioni locali automati
                                 i service creati per organizzazione vanno messi dentro la stessa cartella da noi creata
 -->
 
-<app-routing></app-routing>
+<!--
+  ROUTING
+
+  Di base è l'instradamento, la capacità che abbianmo da spostarci da una pagina all'altra o da un componente ad un altro
+  Angualr fa finta di cambiare pagina con finti collegamenti, cambia l'url e lo tratta come se fosse una nuova pagina 
+  è una gstione di pagine che in realtà non esistono 
+  ng g module app-routing --flat --module=app   -> è il comando che crea il file di ruoting in src senza cartella specifica, 
+                                                    dopodichè va specifica in che modulo va inserito
+
+
+                      
+
+
+<a routerLink="/" style="margin-right: 10Px;">Home</a>
+<a routerLink="about" style="margin-right: 10Px;">About</a>
+<a routerLink="contact" style="margin-right: 10Px;">Contact</a>
+
+
+<router-outlet></router-outlet>
+
+-->
+
+
+<!--
+  ROUTING CON PARAMETRI
+  generiamo per esempio un componente contatti nella cartella componenti
+
+-->
+
+
+<a routerLink="/" style="margin-right: 10Px;">Home</a>
+<a routerLink="contatti" style="margin-right: 10Px;">Contatti</a>
+<router-outlet></router-outlet>

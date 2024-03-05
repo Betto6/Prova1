@@ -18,8 +18,12 @@ export class ServizioProvaService {
 
   constructor() { }
 
-  getPersona() {
+  getPersone() {
     return this.persone
+  }
+
+  getPersona(index: number) {
+    return this.persone[index]
   }
 
 }

@@ -8,9 +8,8 @@ import { ServizioProvaService } from '../servizi/servizio-prova.service';
 })
 export class ServiceComponent implements OnInit
 {
-  constructor(private servizioProva: ServizioProvaService) {}
+  constructor() {}
 
   ngOnInit(): void {
-    console.log(this.servizioProva.getPersona())
   }
 }
