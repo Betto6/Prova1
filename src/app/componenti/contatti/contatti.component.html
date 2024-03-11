@@ -1,9 +1,22 @@
-<div *ngIf="!isProfile; else profiloContatto">
+<!-- 
+<div *ngIf="!isProfile">
     <p style="text-transform: uppercase; margin-top: 10Px;">Lista Contatti</p>
         <div *ngFor="let persona of persone; index as i">
             <a routerLink="/contatti/{{i}}"> <p>{{persona.nome}} {{persona.cognome}}</p></a>
         </div>
 </div>
+<router-outlet></router-outlet> 
+
 <ng-template #profiloContatto>
-    <p>Profilo di {{persona.nome}} {{persona.cognome}}</p>
-</ng-template>
+Su app-contatto abbiamo fatto property-binding di personaContatto con la persona dei contatti
+    <app-contatto [personaContatto]="persona"></app-contatto>
+</ng-template> -->
+<div>
+    <p style="text-transform: uppercase; margin-top: 10Px;">Lista Contatti</p>
+        <div>
+            <div *ngFor="let persona of persone; index as i">
+                <a routerLink="/contatti/{{i}}"> <p>{{persona.nome}} {{persona.cognome}}</p></a>
+            </div>
+        </div>
+</div>
+<router-outlet></router-outlet>    

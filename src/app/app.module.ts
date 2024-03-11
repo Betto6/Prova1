@@ -36,11 +36,13 @@ import { AboutComponent } from './componenti/about/about.component';
 import { ContactComponent } from './componenti/contact/contact.component';
 import { HomeComponent } from './componenti/home/home.component';
 import { ContattiComponent } from './componenti/contatti/contatti.component';
+import { ContattoComponent } from './componenti/contatto/contatto.component';
+import { NotfoundComponent } from './componenti/notfound/notfound.component';
 
 
 @NgModule({
   // nelle declarations vengono dichiarati i componenti, le direttive, le pipe ecc.. i building block (mattoncini) dell'applicazione
-  declarations: [AppComponent, Prova1Component, Prova2Component, TwoWayComponent, NGIFComponent, NgforComponent, NgswitchComponent, NgstyleComponent, NgclassComponent, ParentChildComponent, ChildParentComponent, ReferenceHTMLComponent, DirettiveComponent, HighlightDirective, PipesComponent, ServiceComponent, RoutingComponent, AboutComponent, ContactComponent, HomeComponent, ContattiComponent],
+  declarations: [AppComponent, Prova1Component, Prova2Component, TwoWayComponent, NGIFComponent, NgforComponent, NgswitchComponent, NgstyleComponent, NgclassComponent, ParentChildComponent, ChildParentComponent, ReferenceHTMLComponent, DirettiveComponent, HighlightDirective, PipesComponent, ServiceComponent, RoutingComponent, AboutComponent, ContactComponent, HomeComponent, ContattiComponent, ContattoComponent, NotfoundComponent],
   // vengono inseriti i moduli, che ci servono per lavorare 
   imports: [
     BrowserModule,
